@@ -41,6 +41,10 @@ Variables
   --clr-grey-3: hsl(209, 34%, 30%);
   --clr-grey-4: hsl(209, 28%, 39%);
 
+/* blues*/
+--clr-blue-1:rgba(21, 53, 100, 0.9);
+--clr-blue-2:rgba(22, 122, 139, 0.9);
+
   /*glass*/
   --clr-glass-1: rgba(251, 120, 187, 0.56);
   /* --clr-glass-2: linear-gradient(89.62deg, rgba(42, 3, 3, 0.801) 0.31%, rgba(255, 187, 0, 0.144) 55.16%, rgba(0, 0, 0, 0.76) 99.67%); */
@@ -204,9 +208,9 @@ p {
   margin-bottom: 4rem;
   text-align: center;
 }
-.bg-grey {
+/* .bg-grey {
   background: var(--clr-grey-10);
-}
+} */
 /* page links */
 
 /* social links */
@@ -239,7 +243,12 @@ Navbar
   display: flex;
   align-items: center;
   z-index: 200;
-  background: var(--clr-white);
+  background: var(--clr-glass-2);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border: 1px solid #ffffff2f;
+  filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.25));
+box-sizing: border-box;
+
 }
 .nav-center {
   width: 90vw;
@@ -481,7 +490,7 @@ Hero
     left: 60%;
     right: 0;
     bottom: 0;
-    background: var(--clr-white);
+    background: linear-gradient( hsl(210, 36%, 96%), 99.67%89.62deg, hsl(0, 73%, 28%) 0.31%, hsl(209, 34%, 30%) 55.16%, hsl(210, 36%, 96%) 99.67%);
   }
   .hero-center {
     grid-template-columns: repeat(12, 1fr);
@@ -529,7 +538,9 @@ Services
 ===============
 */
 .service {
-  background: var(--clr-white);
+  background: linear-gradient(90deg, rgba(154, 148, 148, 0.5) -4.53%, rgba(254, 253, 255, 0.5) 67.4%);
+  backdrop-filter: blur(4px);
+  /* Note: backdrop-filter has minimal browser support */
   padding: 3rem 1.5rem;
   margin-bottom: 2rem;
   border-radius: var(--radius);
@@ -552,7 +563,7 @@ Services
   transition: var(--transition);
 }
 .service:hover {
-  background: var(--clr-primary-5);
+  background:var( --clr-blue-2);
   color: var(--clr-primary-9);
 }
 .service:hover p {
